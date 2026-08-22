@@ -1,0 +1,49 @@
+{
+  "meta": {},
+  "data": {
+    "dataflows": [
+      {
+        "id": "ALC",
+        "version": "1.0.0",
+        "agencyID": "ABS",
+        "name": "Apparent Consumption of Alcohol",
+        "description": "Alcohol consumption estimates."
+      }
+    ],
+    "dataStructures": [
+      {
+        "id": "ALC",
+        "version": "1.0.0",
+        "agencyID": "ABS",
+        "name": "Alcohol data structure",
+        "dataStructureComponents": {
+          "dimensionList": {
+            "dimensions": [
+              {
+                "id": "MEASURE",
+                "position": 0,
+                "type": "Dimension",
+                "conceptIdentity": "urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ABS:CS_COMMON(1.0.0).MEASURE",
+                "localRepresentation": {
+                  "enumeration": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ABS:CL_ALC_MEASURE(1.0.0)"
+                }
+              },
+              {
+                "id": "ALCOHOL_TYPE",
+                "position": 1,
+                "type": "Dimension",
+                "localRepresentation": {
+                  "enumeration": "urn:sdmx:org.sdmx.infomodel.codelist.Codelist=ABS:CL_ALC_TYP(1.0.0)"
+                }
+              }
+            ],
+            "timeDimensions": [{ "id": "TIME_PERIOD", "position": 2, "type": "TimeDimension" }]
+          },
+          "attributeList": {
+            "attributes": [{ "id": "UNIT_MEASURE" }]
+          }
+        }
+      }
+    ]
+  }
+}

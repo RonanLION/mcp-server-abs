@@ -1,0 +1,21 @@
+{
+  "meta": { "schema": "https://example.invalid" },
+  "data": {
+    "dataflows": [
+      {
+        "id": "CPI",
+        "version": "1.1.0",
+        "agencyID": "ABS",
+        "name": "Consumer Price Index",
+        "description": "Quarterly consumer price indexes for Australia."
+      },
+      {
+        "id": "ALC",
+        "version": "1.0.0",
+        "agencyID": "ABS",
+        "name": "Apparent Consumption of Alcohol",
+        "annotations": [{ "type": "NonProductionDataflow", "text": "true" }]
+      }
+    ]
+  }
+}

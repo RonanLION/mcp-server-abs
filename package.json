@@ -1,0 +1,76 @@
+{
+  "name": "@ronanlion/mcp-server-abs",
+  "version": "0.1.0",
+  "description": "A maintained Model Context Protocol server for querying Australian Bureau of Statistics data.",
+  "type": "module",
+  "license": "MIT",
+  "author": "RonanLION",
+  "homepage": "https://github.com/RonanLION/mcp-server-abs#readme",
+  "bugs": "https://github.com/RonanLION/mcp-server-abs/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonanLION/mcp-server-abs.git"
+  },
+  "keywords": [
+    "abs",
+    "australia",
+    "mcp",
+    "model-context-protocol",
+    "open-data",
+    "sdmx",
+    "statistics"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "npm@11.15.0",
+  "bin": {
+    "mcp-server-abs": "dist/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run smoke",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "prepare": "npm run build",
+    "smoke": "node scripts/stdio-smoke.mjs",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:live": "RUN_LIVE_TESTS=1 vitest run tests/live.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@modelcontextprotocol/client": "^2.0.0",
+    "@types/node": "^22.20.1",
+    "@vitest/coverage-v8": "^4.1.11",
+    "eslint": "^10.0.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.67.0",
+    "vitest": "^4.1.11"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
