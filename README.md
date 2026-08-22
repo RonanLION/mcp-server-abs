@@ -43,8 +43,6 @@ Install directly from GitHub:
 codex mcp add abs -- npx -y github:RonanLION/mcp-server-abs
 ```
 
-Because this repository is private, the machine running Codex must already have authenticated Git access to it.
-
 Then start a new Codex session and use `/mcp` to confirm that `abs` exposes four tools. The equivalent configuration is:
 
 ```toml
