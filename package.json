@@ -2,6 +2,7 @@
   "name": "@ronanlion/mcp-server-abs",
   "version": "0.1.0",
   "description": "A maintained Model Context Protocol server for querying Australian Bureau of Statistics data.",
+  "private": true,
   "type": "module",
   "license": "MIT",
   "author": "RonanLION",
@@ -68,9 +69,5 @@
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.67.0",
     "vitest": "^4.1.11"
-  },
-  "publishConfig": {
-    "access": "public",
-    "provenance": true
   }
 }
